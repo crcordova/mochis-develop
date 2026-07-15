@@ -1,0 +1,32 @@
+{
+  "site": {
+    "name": "mochis-play",
+    "description": "Peluches con IA integrada para aprender, jugar y hacer compañía. Para niños y adultos.",
+    "url": "https://mochis-play.vercel.app",
+    "locale": "es-CL",
+    "keywords": [
+      "peluches con IA",
+      "peluches inteligentes",
+      "juguetes educativos",
+      "IA para niños",
+      "aprendizaje con IA",
+      "peluches interactivos",
+      "mochis-play",
+      "compañía adultos",
+      "estudio idiomas"
+    ]
+  },
+  "disclaimer": {
+    "short": "Juegos cortos • Sin memoria • Puede alucinar • Usa con responsabilidad",
+    "full": "Los peluches mochis-play utilizan inteligencia artificial para conversaciones y juegos cortos. La IA no guarda memoria de las conversaciones anteriores y puede cometer errores (alucinaciones). Usa el peluche como herramienta complementaria, no como fuente única de información. Recomendado para sesiones cortas de interacción."
+  },
+  "social": {
+    "instagram": "https://instagram.com/mochisplay",
+    "tiktok": "https://tiktok.com/@mochisplay",
+    "youtube": "https://youtube.com/@mochisplay"
+  },
+  "contact": {
+    "email": "hola@mochis-play.com",
+    "whatsapp_env_var": "WHATSAPP_NUMBER"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "orchestrator",
+  "instructions": ["AGENTS.md"],
+  "agent": {
+    "orchestrator": {
+      "description": "Project orchestrator that delegates work to specialist subagents (planner, coder, designer, reviewer).",
+      "mode": "primary"
+    },
+    "planner": {
+      "description": "Creates implementation plans with exact scope, boundaries, and stop rules.",
+      "mode": "subagent"
+    },
+    "coder": {
+      "description": "Writes code following mandatory principles. Reports in machine-scannable format.",
+      "mode": "subagent"
+    },
+    "designer": {
+      "description": "Handles UI/UX, system architecture, API design, and visual design.",
+      "mode": "subagent"
+    },
+    "reviewer": {
+      "description": "Neutral audit, code review, evidence verification, and closure readiness.",
+      "mode": "subagent"
+    }
+  }
+}

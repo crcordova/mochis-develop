@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "id": "alternativa-pantallas",
+      "title": "Una Alternativa al Exceso de Pantallas",
+      "excerpt": "Descubre cómo los peluches con IA pueden reducir el tiempo de pantalla manteniendo la interacción tecnológica.",
+      "slug": "alternativa-pantallas",
+      "date": "2026-07-07",
+      "category": "bienestar",
+      "read_time": "5 min"
+    },
+    {
+      "id": "ia-para-ninos",
+      "title": "IA para Niños: Aprendizaje a Través del Juego",
+      "excerpt": "Cómo la IA integrada en peluches puede hacer del aprendizaje una experiencia lúdica y natural.",
+      "slug": "ia-para-ninos",
+      "date": "2026-07-07",
+      "category": "educacion",
+      "read_time": "7 min"
+    },
+    {
+      "id": "compania-adultos",
+      "title": "Compañía para Adultos: Más Allá de los Niños",
+      "excerpt": "Los peluches con IA también son para adultos: estudio de idiomas, compañía y apoyo emocional.",
+      "slug": "compania-adultos",
+      "date": "2026-07-07",
+      "category": "bienestar",
+      "read_time": "6 min"
+    },
+    {
+      "id": "tecnologia-responsable",
+      "title": "Tecnología con Responsabilidad",
+      "excerpt": "Cómo enseñar a niños y adultos a usar la IA de forma crítica y responsable.",
+      "slug": "tecnologia-responsable",
+      "date": "2026-07-07",
+      "category": "educacion",
+      "read_time": "8 min"
+    }
+  ],
+  "categories": [
+    {
+      "id": "bienestar",
+      "name": "Bienestar",
+      "description": "Artículos sobre bienestar digital y compañía."
+    },
+    {
+      "id": "educacion",
+      "name": "Educación",
+      "description": "Artículos sobre aprendizaje y uso educativo de la IA."
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "tutorials": [
+    {
+      "id": "config-inicial-hardware",
+      "title": "Configuración Inicial del Hardware",
+      "description": "Aprende cómo conectar y configurar tu peluche mochis-play por primera vez.",
+      "youtube_id": "PLACEHOLDER_VIDEO_ID_1",
+      "youtube_url": "https://youtube.com/placeholder1",
+      "category": "configuracion",
+      "order": 1,
+      "duration": "5:30"
+    },
+    {
+      "id": "config-inicial-wifi",
+      "title": "Conexión WiFi",
+      "description": "Configura la conexión a internet de tu peluche para habilitar la IA.",
+      "youtube_id": "PLACEHOLDER_VIDEO_ID_2",
+      "youtube_url": "https://youtube.com/placeholder2",
+      "category": "configuracion",
+      "order": 2,
+      "duration": "3:45"
+    },
+    {
+      "id": "config-roles-llm",
+      "title": "Configurar Roles del LLM",
+      "description": "Personaliza cómo responde la IA: profesor, amigo, contador de historias y más.",
+      "youtube_id": "PLACEHOLDER_VIDEO_ID_3",
+      "youtube_url": "https://youtube.com/placeholder3",
+      "category": "personalizacion",
+      "order": 1,
+      "duration": "7:20"
+    },
+    {
+      "id": "config-planes-estudio",
+      "title": "Crear Planes de Estudio",
+      "description": "Usa tu peluche para crear planes de estudio personalizados para idiomas o materias.",
+      "youtube_id": "PLACEHOLDER_VIDEO_ID_4",
+      "youtube_url": "https://youtube.com/placeholder4",
+      "category": "personalizacion",
+      "order": 2,
+      "duration": "6:15"
+    },
+    {
+      "id": "config-compania-adultos",
+      "title": "Uso para Compañía en Adultos",
+      "description": "Cómo configurar el peluche para conversación y compañía para adultos.",
+      "youtube_id": "PLACEHOLDER_VIDEO_ID_5",
+      "youtube_url": "https://youtube.com/placeholder5",
+      "category": "personalizacion",
+      "order": 3,
+      "duration": "8:00"
+    },
+    {
+      "id": "como-funciona-ia",
+      "title": "¿Cómo Funciona la IA?",
+      "description": "Explicación simple de cómo funciona la inteligencia artificial en tu peluche.",
+      "youtube_id": "PLACEHOLDER_VIDEO_ID_6",
+      "youtube_url": "https://youtube.com/placeholder6",
+      "category": "informacion",
+      "order": 1,
+      "duration": "10:30"
+    },
+    {
+      "id": "alucinaciones-ia",
+      "title": "Entendiendo las Alucinaciones de la IA",
+      "description": "Qué son las alucinaciones de la IA y cómo usar el peluche de forma responsable.",
+      "youtube_id": "PLACEHOLDER_VIDEO_ID_7",
+      "youtube_url": "https://youtube.com/placeholder7",
+      "category": "informacion",
+      "order": 2,
+      "duration": "9:45"
+    }
+  ],
+  "categories": [
+    {
+      "id": "configuracion",
+      "name": "Configuración Inicial",
+      "description": "Tutoriales para configurar el hardware y conexión de tu peluche."
+    },
+    {
+      "id": "personalizacion",
+      "name": "Personalización",
+      "description": "Aprende a configurar la IA según tus necesidades: estudio, compañía, juegos."
+    },
+    {
+      "id": "informacion",
+      "name": "Sobre la IA",
+      "description": "Información sobre cómo funciona la IA y uso responsable."
+    }
+  ]
+}

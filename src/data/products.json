@@ -1,0 +1,130 @@
+{
+  "categories": [
+    {
+      "id": "uwus",
+      "name": "mochis",
+      "description": "Peluches con cara, los más grandes. 5 personalidades únicas con IA integrada para aprender, jugar y hacer compañía.",
+      "size": "grande",
+      "has_name": true,
+      "ml_env_var": "ML_UWUS_URL",
+      "products": [
+        {
+          "id": "mimi",
+          "name": "Mimi",
+          "color": "rosa",
+          "image": "/images/products/uwus/mimi.webp",
+          "description": "Dulce y cariñosa. Perfecta para abrazos y aprender juntos.",
+          "features": ["Aprende idiomas", "Cuenta historias", "Juegos cortos"]
+        },
+        {
+          "id": "duoduo",
+          "name": "Duoduo",
+          "color": "azul",
+          "image": "/images/products/uwus/duoduo.webp",
+          "description": "Tranquilo y sabio. Ideal para estudiar y resolver dudas.",
+          "features": ["Ayuda con tareas", "Explica conceptos", "Traducciones"]
+        },
+        {
+          "id": "paopao",
+          "name": "Paopao",
+          "color": "blanco",
+          "image": "/images/products/uwus/paopao.webp",
+          "description": "Juguetón y curioso. Siempre listo para inventar juegos.",
+          "features": ["Juegos creativos", "Historias interactivas", "Adivinanzas"]
+        },
+        {
+          "id": "yuyu",
+          "name": "Yuyu",
+          "color": "amarillo",
+          "image": "/images/products/uwus/yuyu.webp",
+          "description": "Alegre y energético. Compañero perfecto para aventuras.",
+          "features": ["Planes de estudio", "Vocabulario nuevo", "Datos curiosos"]
+        },
+        {
+          "id": "nana",
+          "name": "Nana",
+          "color": "lavanda",
+          "image": "/images/products/uwus/nana.webp",
+          "description": "Soñadora y creativa. Ideal para inspirar y acompañar.",
+          "features": ["Compañía", "Conversaciones", "Relajación"]
+        }
+      ]
+    },
+    {
+      "id": "gatos",
+      "name": "Gatitos",
+      "description": "Elegantes y misteriosos. Peluches medianos con IA para compañía y aprendizaje.",
+      "size": "mediano",
+      "has_name": false,
+      "ml_env_var": "ML_GATOS_URL",
+      "products": [
+        {
+          "id": "gato-negro",
+          "name": null,
+          "color": "negro",
+          "image": "/images/products/gatos/gato-negro.webp",
+          "description": "Gatito negro misterioso con IA integrada.",
+          "features": ["Compañía", "Conversaciones", "Juegos cortos"]
+        },
+        {
+          "id": "gato-blanco",
+          "name": null,
+          "color": "blanco",
+          "image": "/images/products/gatos/gato-blanco.webp",
+          "description": "Gatito blanco suave y acogedor con IA.",
+          "features": ["Relajación", "Historias", "Aprendizaje"]
+        },
+        {
+          "id": "gato-gris",
+          "name": null,
+          "color": "gris",
+          "image": "/images/products/gatos/gato-gris.webp",
+          "description": "Gatito gris equilibrado y amigable con IA.",
+          "features": ["Ayuda con estudios", "Traducciones", "Compañía"]
+        }
+      ]
+    },
+    {
+      "id": "pifos",
+      "name": "Pifos",
+      "description": "Pequeños y juguetones. Peluches compactos con IA para diversión rápida.",
+      "size": "pequeño",
+      "has_name": false,
+      "ml_env_var": "ML_PIFOS_URL",
+      "products": [
+        {
+          "id": "pifo-rojo",
+          "name": null,
+          "color": "rojo",
+          "image": "/images/products/pifos/pifo-rojo.webp",
+          "description": "Pifo rojo vibrante y divertido con IA.",
+          "features": ["Juegos rápidos", "Datos curiosos", "Risas"]
+        },
+        {
+          "id": "pifo-verde",
+          "name": null,
+          "color": "verde",
+          "image": "/images/products/pifos/pifo-verde.webp",
+          "description": "Pifo verde fresco y natural con IA.",
+          "features": ["Naturaleza", "Aprendizaje", "Juegos"]
+        },
+        {
+          "id": "pifo-azul",
+          "name": null,
+          "color": "azul",
+          "image": "/images/products/pifos/pifo-azul.webp",
+          "description": "Pifo azul calmado y reflexivo con IA.",
+          "features": ["Relajación", "Meditación", "Historias"]
+        },
+        {
+          "id": "pifo-amarillo",
+          "name": null,
+          "color": "amarillo",
+          "image": "/images/products/pifos/pifo-amarillo.webp",
+          "description": "Pifo amarillo alegre y energético con IA.",
+          "features": ["Energía", "Juegos", "Buen humor"]
+        }
+      ]
+    }
+  ]
+}

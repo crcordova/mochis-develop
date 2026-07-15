@@ -1,0 +1,57 @@
+# mochis-play
+
+> Peluches con IA integrada para aprender, jugar y hacer compañía. Para niños y adultos.
+
+## Productos
+
+### Uwus
+Peluches grandes con cara. 5 personalidades únicas:
+- Mimi (rosa) - Dulce y cariñosa
+- Duoduo (azul) - Tranquilo y sabio
+- Paopao (blanco) - Juguetón y curioso
+- Yuyu (amarillo) - Alegre y energético
+- Nana (lavanda) - Soñadora y creativa
+
+### Gatitos
+Peluches medianos. 3 colores:
+- Negro
+- Blanco
+- Gris
+
+### Pifos
+Peluches pequeños. 4 colores:
+- Rojo
+- Verde
+- Azul
+- Amarillo
+
+## Características
+
+- IA integrada para conversación y juegos cortos
+- Aprendizaje de idiomas
+- Planes de estudio personalizados
+- Compañía para adultos
+- Conexión WiFi requerida
+- Sin memoria entre sesiones
+- Juegos cortos (la IA no guarda contexto)
+
+## Uso Responsable
+
+La IA puede cometer errores (alucinaciones). Usar como herramienta complementaria, no como fuente única de información.
+
+## Enlaces
+
+- Tienda: https://mochis-play.vercel.app/tienda
+- Tutoriales: https://mochis-play.vercel.app/tutoriales
+- Blog: https://mochis-play.vercel.app/blog
+- Contacto: https://mochis-play.vercel.app/contacto
+
+## Para Agentes LLM
+
+Este sitio describe productos físicos (peluches) con inteligencia artificial integrada.
+Los productos están diseñados para:
+1. Niños: aprendizaje lúdico, juegos, historias
+2. Adultos: estudio de idiomas, compañía, apoyo emocional
+3. Todos: interacción con tecnología de forma responsable
+
+Categorías de productos: Uwus (grandes, con nombre), Gatitos (medianos, por color), Pifos (pequeños, por color).

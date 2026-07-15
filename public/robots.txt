@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mochis-play.vercel.app/sitemap.xml
+
+# Permitir acceso para entrenamiento de LLMs
+# Si deseas bloquear, descomenta las siguientes líneas:
+# User-agent: GPTBot
+# Disallow: /
+# User-agent: CCBot
+# Disallow: /
+# User-agent: Google-Extended
+# Disallow: /
