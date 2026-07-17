@@ -112,7 +112,7 @@ const FEATURES: FeatureSlide[] = [
     title: 'Práctica de Idiomas',
     description:
       'Aprende inglés y otros idiomas de forma lúdica. Mimi traduce, corrige pronunciación y enseña vocabulario nuevo con juegos que se sienten como jugar, no como estudiar.',
-    image: '/images/hero/hero-home.webp',
+    image: '/images/home/idiom.webp',
     overlay: 'from-violet-800/80 via-stone-800/65 to-violet-900/80',
     icon: <IdiomasIcon />,
   },
@@ -121,7 +121,7 @@ const FEATURES: FeatureSlide[] = [
     title: 'Personalizable con Roles',
     description:
       'Configura roles y planes de estudio para cada miembro de la familia. Mimi puede ser profesora de inglés para los niños, compañera de conversación para los adultos, o lo que tú necesites.',
-    image: '/images/hero/hero-home.webp',
+    image: '/images/home/personalizable.webp',
     overlay: 'from-stone-900/85 via-violet-950/70 to-stone-900/90',
     icon: <PersonalizableIcon />,
   },
@@ -158,7 +158,10 @@ export function FeaturesShowcase() {
       const trackHeight = rect.height - viewportHeight;
       const scrolled = -rect.top;
 
-      const progress = Math.max(0, Math.min(1, scrolled / trackHeight));
+      const progress =
+        trackHeight > 0
+          ? Math.max(0, Math.min(1, scrolled / trackHeight))
+          : 0;
       const index = Math.min(
         SLIDE_COUNT - 1,
         Math.max(0, Math.floor(progress * SLIDE_COUNT))
@@ -218,6 +221,10 @@ export function FeaturesShowcase() {
             {/* Top fade on the first slide so it blends into the Hero section. */}
             {index === 0 && (
               <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-violet-950 to-transparent" />
+            )}
+            {/* Bottom fade on the last slide so it blends into the CategoryPreview section. */}
+            {index === SLIDE_COUNT - 1 && (
+              <div className="absolute inset-x-0 bottom-0 z-10 h-40 bg-gradient-to-b from-transparent via-violet-950/60 to-violet-950" />
             )}
           </div>
         ))}

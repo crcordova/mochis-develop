@@ -81,7 +81,7 @@ export function Card({
   return (
     <div
       className={[
-        'w-full overflow-hidden',
+        'w-full h-full flex flex-col overflow-hidden',
         'bg-[var(--color-bg-card)]',
         'rounded-[var(--radius-card)]',
         'shadow-[var(--shadow-card)]',
@@ -115,7 +115,7 @@ export function Card({
       </div>
 
       {/* Content area */}
-      <div className="p-[var(--space-md)] flex flex-col gap-[var(--space-sm)]">
+      <div className="p-[var(--space-md)] flex flex-col gap-[var(--space-sm)] flex-grow">
         <h3 className="text-[var(--text-heading-sm)] font-[var(--font-weight-semibold)] text-[var(--color-text)] leading-[var(--line-height-tight)]">
           {title}
         </h3>

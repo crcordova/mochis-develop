@@ -31,7 +31,7 @@ const FILTER_OPTIONS = [
   { id: 'todos', label: 'Todos' },
   { id: 'uwus', label: 'Mochis' },
   { id: 'gatos', label: 'Gatitos' },
-  { id: 'pifos', label: 'Pifos' },
+  { id: 'pifos', label: 'Ponejos' },
 ];
 
 const FILTER_BUTTON_BASE = [

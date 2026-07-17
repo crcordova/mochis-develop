@@ -86,7 +86,7 @@
     },
     {
       "id": "pifos",
-      "name": "Pifos",
+      "name": "Ponejos",
       "description": "Pequeños y juguetones. Peluches compactos con IA para diversión rápida.",
       "size": "pequeño",
       "has_name": false,
@@ -97,7 +97,7 @@
           "name": null,
           "color": "rojo",
           "image": "/images/products/pifos/pifo-rojo.webp",
-          "description": "Pifo rojo vibrante y divertido con IA.",
+          "description": "Ponejo rojo vibrante y divertido con IA.",
           "features": ["Juegos rápidos", "Datos curiosos", "Risas"]
         },
         {
@@ -105,7 +105,7 @@
           "name": null,
           "color": "verde",
           "image": "/images/products/pifos/pifo-verde.webp",
-          "description": "Pifo verde fresco y natural con IA.",
+          "description": "Ponejo verde fresco y natural con IA.",
           "features": ["Naturaleza", "Aprendizaje", "Juegos"]
         },
         {
@@ -113,7 +113,7 @@
           "name": null,
           "color": "azul",
           "image": "/images/products/pifos/pifo-azul.webp",
-          "description": "Pifo azul calmado y reflexivo con IA.",
+          "description": "Ponejo azul calmado y reflexivo con IA.",
           "features": ["Relajación", "Meditación", "Historias"]
         },
         {
@@ -121,7 +121,7 @@
           "name": null,
           "color": "amarillo",
           "image": "/images/products/pifos/pifo-amarillo.webp",
-          "description": "Pifo amarillo alegre y energético con IA.",
+          "description": "Ponejo amarillo alegre y energético con IA.",
           "features": ["Energía", "Juegos", "Buen humor"]
         }
       ]

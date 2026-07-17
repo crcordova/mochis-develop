@@ -59,7 +59,7 @@ export function getProductDisplayName(product: {
     product.categoryId === 'gatos'
       ? 'Gatito'
       : product.categoryId === 'pifos'
-        ? 'Pifo'
+        ? 'Ponejo'
         : product.categoryId;
 
   return `${categoryLabel} ${product.color}`;

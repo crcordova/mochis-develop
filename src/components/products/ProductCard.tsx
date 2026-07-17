@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/Badge';
 import { BuyButtons } from './BuyButtons';
 import { trackProductView } from '@/lib/analytics';
 
-type BadgeVariant = 'uwus' | 'gatos' | 'pifos' | 'default';
+type BadgeVariant = 'uwus' | 'gatos' | 'pifos' | 'ponejos' | 'default';
 
 interface ProductData {
   id: string;
@@ -45,7 +45,11 @@ export function ProductCard({
   }, [product.id, displayName, category]);
 
   const badgeVariant = (
-    ['uwus', 'gatos', 'pifos'].includes(category) ? category : 'default'
+    ['uwus', 'gatos', 'pifos', 'ponejos'].includes(category)
+      ? category === 'pifos'
+        ? 'ponejos'
+        : category
+      : 'default'
   ) as BadgeVariant;
 
   return (

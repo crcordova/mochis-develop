@@ -1,4 +1,4 @@
-type BadgeVariant = 'uwus' | 'gatos' | 'pifos' | 'default';
+type BadgeVariant = 'uwus' | 'gatos' | 'pifos' | 'ponejos' | 'default';
 
 interface BadgeProps {
   label: string;
@@ -10,6 +10,7 @@ const VARIANT_STYLES: Record<BadgeVariant, string> = {
   uwus: 'bg-[var(--color-category-uwus-bg)] text-[var(--color-category-uwus-text)]',
   gatos: 'bg-[var(--color-category-gatos-bg)] text-[var(--color-category-gatos-text)]',
   pifos: 'bg-[var(--color-category-pifos-bg)] text-[var(--color-category-pifos-text)]',
+  ponejos: 'bg-[var(--color-category-ponejos-bg)] text-[var(--color-category-ponejos-text)]',
   default: 'bg-[var(--color-bg-subtle)] text-[var(--color-text-secondary)]',
 };
 

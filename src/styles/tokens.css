@@ -252,11 +252,14 @@
   --color-category-gatos-bg:    var(--color-sky-50);
   --color-category-gatos-text:  var(--color-sky-500);
 
-  /* Pifos — soft lime/yellow-green
+  /* Pifos / Ponejos — soft lime/yellow-green
      NOTE: lime-700 used for text to meet WCAG AA 4.5:1 on lime-50 background. */
-  --color-category-pifos:       var(--color-lime-300);
-  --color-category-pifos-bg:    var(--color-lime-50);
-  --color-category-pifos-text:  var(--color-lime-700);  /* #4D7C0F — ~4.9:1 on lime-50 */
+  --color-category-pifos:        var(--color-lime-300);
+  --color-category-pifos-bg:     var(--color-lime-50);
+  --color-category-pifos-text:   var(--color-lime-700);  /* #4D7C0F — ~4.9:1 on lime-50 */
+  --color-category-ponejos:      var(--color-category-pifos);
+  --color-category-ponejos-bg:   var(--color-category-pifos-bg);
+  --color-category-ponejos-text: var(--color-category-pifos-text);
 
   /* --- Semantic Spacing --- */
   --space-xs:  var(--space-1);   /* 4px  — tight gaps */
