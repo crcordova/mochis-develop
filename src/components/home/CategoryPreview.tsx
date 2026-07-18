@@ -2,25 +2,27 @@ import Image from 'next/image';
 import { Card, Badge, Button } from '@/components/ui';
 import productsData from '@/data/products.json';
 
-const uwusProduct = productsData.categories[0].products[0]; // mimi
-const ponejosProduct = productsData.categories[2].products[0]; // ponejo-rojo
+const mochisCategory = productsData.categories[0];
+const ponejosCategory = productsData.categories[2];
 
 const categoryPreviews = [
   {
-    product: uwusProduct,
-    badgeVariant: 'uwus' as const,
+    category: mochisCategory,
+    badgeVariant: 'mochis' as const,
     badgeLabel: 'mochis',
-    cardTitle: uwusProduct.name as string,
+    cardTitle: 'Mochis',
+    collectionImage: '/images/categories/mochis-collection.webp',
     trackingId: 'home_preview_mochis',
     buttonLabel: 'home_category_mochis',
     buttonText: 'Ver mochis',
-    glowColor: 'var(--color-category-uwus)',
+    glowColor: 'var(--color-category-mochis)',
   },
   {
-    product: ponejosProduct,
+    category: ponejosCategory,
     badgeVariant: 'ponejos' as const,
     badgeLabel: 'Ponejos',
-    cardTitle: `Ponejo ${ponejosProduct.color}`,
+    cardTitle: 'Ponejos',
+    collectionImage: '/images/categories/ponejos-collection.webp',
     trackingId: 'home_preview_ponejos',
     buttonLabel: 'home_category_ponejos',
     buttonText: 'Ver Ponejos',
@@ -98,8 +100,8 @@ export function CategoryPreview() {
               />
               <Card
                 title={cat.cardTitle}
-                description={cat.product.description}
-                image={cat.product.image}
+                description={cat.category.description}
+                image={cat.collectionImage}
                 trackingId={cat.trackingId}
                 trackingData={{ category: cat.badgeLabel.toLowerCase() }}
               >

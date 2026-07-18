@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { ProductCard } from '@/components/products';
+import { ShopBackground } from './ShopBackground';
 
 interface ProductWithUrls {
   id: string;
@@ -29,9 +30,8 @@ interface TiendaClientProps {
 
 const FILTER_OPTIONS = [
   { id: 'todos', label: 'Todos' },
-  { id: 'uwus', label: 'Mochis' },
-  { id: 'gatos', label: 'Gatitos' },
-  { id: 'pifos', label: 'Ponejos' },
+  { id: 'mochis', label: 'Mochis' },
+  { id: 'ponejos', label: 'Ponejos' },
 ];
 
 const FILTER_BUTTON_BASE = [
@@ -67,7 +67,8 @@ export function TiendaClient({ products, categories }: TiendaClientProps) {
       : products.filter((p) => p.category === activeFilter);
 
   return (
-    <div className="flex flex-col gap-[var(--space-lg)]">
+    <div className="relative flex flex-col gap-[var(--space-lg)]">
+      <ShopBackground />
       {/* Filter buttons */}
       <div
         className="flex flex-wrap gap-[var(--space-sm)] justify-center"

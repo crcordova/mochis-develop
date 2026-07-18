@@ -5,9 +5,9 @@
  */
 
 const ML_URL_MAP: Record<string, string> = {
-  uwus: 'ML_UWUS_URL',
+  mochis: 'ML_MOCHIS_URL',
   gatos: 'ML_GATOS_URL',
-  pifos: 'ML_PIFOS_URL',
+  ponejos: 'ML_PONEJOS_URL',
 };
 
 /**
@@ -58,7 +58,7 @@ export function getProductDisplayName(product: {
   const categoryLabel =
     product.categoryId === 'gatos'
       ? 'Gatito'
-      : product.categoryId === 'pifos'
+      : product.categoryId === 'ponejos'
         ? 'Ponejo'
         : product.categoryId;
 

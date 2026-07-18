@@ -55,9 +55,9 @@ module.exports = {
         },
         /* Category accents — pastel/muted, gender-neutral */
         accent: {
-          uwus:   'var(--color-category-uwus)',
-          gatos:  'var(--color-category-gatos)',
-          pifos:  'var(--color-category-pifos)',
+          mochis:   'var(--color-category-mochis)',
+          gatos:    'var(--color-category-gatos)',
+          ponejos:  'var(--color-category-ponejos)',
         },
         /* Semantic surface/text colors for utility classes */
         surface: {

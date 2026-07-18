@@ -55,13 +55,21 @@ export function BuyButtons({
   category,
   categoryName,
 }: BuyButtonsProps) {
-  const handleMLClick = useCallback(() => {
-    trackBuyMLClick(category, categoryName);
-  }, [category, categoryName]);
+  const handleMLClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.stopPropagation();
+      trackBuyMLClick(category, categoryName);
+    },
+    [category, categoryName]
+  );
 
-  const handleWhatsAppClick = useCallback(() => {
-    trackBuyWhatsAppClick(productId, productName, category);
-  }, [productId, productName, category]);
+  const handleWhatsAppClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.stopPropagation();
+      trackBuyWhatsAppClick(productId, productName, category);
+    },
+    [productId, productName, category]
+  );
 
   return (
     <div className="flex flex-col sm:flex-row gap-[var(--space-sm)] w-full">

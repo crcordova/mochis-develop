@@ -1,18 +1,18 @@
 {
   "categories": [
     {
-      "id": "uwus",
+      "id": "mochis",
       "name": "mochis",
       "description": "Peluches con cara, los más grandes. 5 personalidades únicas con IA integrada para aprender, jugar y hacer compañía.",
       "size": "grande",
       "has_name": true,
-      "ml_env_var": "ML_UWUS_URL",
+      "ml_env_var": "ML_MOCHIS_URL",
       "products": [
         {
           "id": "mimi",
           "name": "Mimi",
           "color": "rosa",
-          "image": "/images/products/uwus/mimi.webp",
+          "image": "/images/products/mochis/mimi.webp",
           "description": "Dulce y cariñosa. Perfecta para abrazos y aprender juntos.",
           "features": ["Aprende idiomas", "Cuenta historias", "Juegos cortos"]
         },
@@ -20,7 +20,7 @@
           "id": "duoduo",
           "name": "Duoduo",
           "color": "azul",
-          "image": "/images/products/uwus/duoduo.webp",
+          "image": "/images/products/mochis/duoduo.webp",
           "description": "Tranquilo y sabio. Ideal para estudiar y resolver dudas.",
           "features": ["Ayuda con tareas", "Explica conceptos", "Traducciones"]
         },
@@ -28,7 +28,7 @@
           "id": "paopao",
           "name": "Paopao",
           "color": "blanco",
-          "image": "/images/products/uwus/paopao.webp",
+          "image": "/images/products/mochis/paopao.webp",
           "description": "Juguetón y curioso. Siempre listo para inventar juegos.",
           "features": ["Juegos creativos", "Historias interactivas", "Adivinanzas"]
         },
@@ -36,7 +36,7 @@
           "id": "yuyu",
           "name": "Yuyu",
           "color": "amarillo",
-          "image": "/images/products/uwus/yuyu.webp",
+          "image": "/images/products/mochis/yuyu.webp",
           "description": "Alegre y energético. Compañero perfecto para aventuras.",
           "features": ["Planes de estudio", "Vocabulario nuevo", "Datos curiosos"]
         },
@@ -44,7 +44,7 @@
           "id": "nana",
           "name": "Nana",
           "color": "lavanda",
-          "image": "/images/products/uwus/nana.webp",
+          "image": "/images/products/mochis/nana.webp",
           "description": "Soñadora y creativa. Ideal para inspirar y acompañar.",
           "features": ["Compañía", "Conversaciones", "Relajación"]
         }
@@ -85,44 +85,44 @@
       ]
     },
     {
-      "id": "pifos",
+      "id": "ponejos",
       "name": "Ponejos",
       "description": "Pequeños y juguetones. Peluches compactos con IA para diversión rápida.",
       "size": "pequeño",
       "has_name": false,
-      "ml_env_var": "ML_PIFOS_URL",
+      "ml_env_var": "ML_PONEJOS_URL",
       "products": [
         {
-          "id": "pifo-rojo",
+          "id": "ponejo-rojo",
           "name": null,
-          "color": "rojo",
-          "image": "/images/products/pifos/pifo-rojo.webp",
-          "description": "Ponejo rojo vibrante y divertido con IA.",
+          "color": "blanco",
+          "image": "/images/products/ponejos/ponejo-blanco.webp",
+          "description": "Ponejo blanco vibrante y divertido con IA.",
           "features": ["Juegos rápidos", "Datos curiosos", "Risas"]
         },
         {
-          "id": "pifo-verde",
+          "id": "ponejo-verde",
           "name": null,
           "color": "verde",
-          "image": "/images/products/pifos/pifo-verde.webp",
+          "image": "/images/products/ponejos/ponejo-verde.webp",
           "description": "Ponejo verde fresco y natural con IA.",
           "features": ["Naturaleza", "Aprendizaje", "Juegos"]
         },
         {
-          "id": "pifo-azul",
+          "id": "ponejo-azul",
           "name": null,
           "color": "azul",
-          "image": "/images/products/pifos/pifo-azul.webp",
+          "image": "/images/products/ponejos/ponejo-azul.webp",
           "description": "Ponejo azul calmado y reflexivo con IA.",
           "features": ["Relajación", "Meditación", "Historias"]
         },
         {
-          "id": "pifo-amarillo",
+          "id": "ponejo-rosa",
           "name": null,
-          "color": "amarillo",
-          "image": "/images/products/pifos/pifo-amarillo.webp",
-          "description": "Ponejo amarillo alegre y energético con IA.",
-          "features": ["Energía", "Juegos", "Buen humor"]
+          "color": "rosa",
+          "image": "/images/products/ponejos/ponejo-rosa.webp",
+          "description": "Ponejo rosa encantador y creativo con IA.",
+          "features": ["Creatividad", "Juegos", "Buen humor"]
         }
       ]
     }

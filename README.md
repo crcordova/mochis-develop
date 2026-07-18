@@ -35,7 +35,7 @@ Landing page para tienda de peluches con IA integrada. Next.js 14 + Tailwind CSS
 |-----------|----------|----------------|--------|
 | **Mochis** | 5 | Nombre propio (Mimi, Duoduo, Paopao, Yuyu, Nana) | Grande |
 | **Gatitos** | 3 | Color (negro, blanco, gris) | Mediano |
-| **Pifos** | 4 | Color (rojo, verde, azul, amarillo) | Pequeño |
+| **Ponejos** | 4 | Color (rojo, verde, azul, amarillo) | Pequeño |
 
 ## Stack Tecnológico
 
@@ -105,9 +105,9 @@ mochis-play/
 ├── public/
 │   ├── images/
 │   │   ├── products/
-│   │   │   ├── uwus/             # mimi.webp, duoduo.webp, etc.
+│   │   │   ├── mochis/           # mimi.webp, duoduo.webp, etc.
 │   │   │   ├── gatos/            # gato-negro.webp, etc.
-│   │   │   └── pifos/            # pifo-rojo.webp, etc.
+│   │   │   └── ponejos/          # ponejo-rojo.webp, etc.
 │   │   ├── hero/                 # Imágenes de portada
 │   │   └── thumbs/               # Thumbnails
 │   ├── llm.txt                   # SEO para agentes LLM
@@ -133,7 +133,7 @@ mochis-play/
 
 ### Home (`/`)
 - Hero section con CTA buttons
-- Preview de categorías (1 producto por categoría)
+- Preview de categorías (colección por categoría)
 - Features section
 - Disclaimer de IA
 
@@ -141,7 +141,7 @@ mochis-play/
 - Grid de productos con filtros por categoría
 - Cards de productos con imagen, nombre/color, descripción, features
 - Botones de compra:
-  - **MercadoLibre**: Por categoría (usa ML_UWUS_URL, ML_GATOS_URL, ML_PIFOS_URL)
+  - **MercadoLibre**: Por categoría (usa ML_MOCHIS_URL, ML_GATOS_URL, ML_PONEJOS_URL)
   - **WhatsApp**: Por producto (mensaje dinámico)
 
 ### Tutoriales (`/tutoriales`)
@@ -183,20 +183,20 @@ mochis-play/
 <Card
   title="Mimi"
   description="Dulce y cariñosa"
-  image="/images/products/uwus/mimi.webp"
+  image="/images/products/mochis/mimi.webp"
   onClick={handler}
   trackingId="mimi"
-  trackingData={{ category: "uwus" }}
+  trackingData={{ category: "mochis" }}
 >
-  <Badge label="Uwus" variant="uwus" />
+  <Badge label="mochis" variant="mochis" />
 </Card>
 ```
 
 #### Badge
 ```tsx
 <Badge 
-  label="Uwus" 
-  variant="uwus"  // uwus | gatos | pifos | custom
+  label="mochis" 
+  variant="mochis"  // mochis | gatos | ponejos | custom
 />
 ```
 
@@ -220,7 +220,7 @@ mochis-play/
 ```tsx
 <TrackClick 
   eventName="product_view" 
-  eventData={{ id: "mimi", category: "uwus" }}
+  eventData={{ id: "mimi", category: "mochis" }}
 >
   <ProductCard product={product} />
 </TrackClick>
@@ -230,7 +230,7 @@ mochis-play/
 ```tsx
 const { trackProductView, trackBuyMLClick, trackBuyWhatsAppClick } = useTracking();
 
-<Button onClick={() => trackBuyMLClick("uwus", "Uwus")}>
+<Button onClick={() => trackBuyMLClick("mochis", "Mochis")}>
   Comprar en ML
 </Button>
 ```
@@ -244,18 +244,18 @@ Todos los datos están en archivos JSON en `src/data/`. Para modificar productos
 {
   "categories": [
     {
-      "id": "uwus",
-      "name": "Uwus",
+      "id": "mochis",
+      "name": "mochis",
       "description": "...",
       "size": "grande",
       "has_name": true,
-      "ml_env_var": "ML_UWUS_URL",
+      "ml_env_var": "ML_MOCHIS_URL",
       "products": [
         {
           "id": "mimi",
           "name": "Mimi",
           "color": "rosa",
-          "image": "/images/products/uwus/mimi.webp",
+          "image": "/images/products/mochis/mimi.webp",
           "description": "Dulce y cariñosa",
           "features": ["Aprende idiomas", "Cuenta historias"]
         }
@@ -380,9 +380,9 @@ cp .env.example .env.local
 
 | Variable | Descripción | Ejemplo |
 |----------|-------------|---------|
-| `ML_UWUS_URL` | Link MercadoLibre categoría Uwus | `https://mercadolibre.com/...` |
+| `ML_MOCHIS_URL` | Link MercadoLibre categoría Mochis | `https://mercadolibre.com/...` |
 | `ML_GATOS_URL` | Link MercadoLibre categoría Gatitos | `https://mercadolibre.com/...` |
-| `ML_PIFOS_URL` | Link MercadoLibre categoría Pifos | `https://mercadolibre.com/...` |
+| `ML_PONEJOS_URL` | Link MercadoLibre categoría Ponejos | `https://mercadolibre.com/...` |
 | `WHATSAPP_NUMBER` | Número de WhatsApp (con código país) | `569XXXXXXXX` |
 | `NEXT_PUBLIC_GA_ID` | Google Analytics ID (opcional) | `G-XXXXXXXXXX` |
 
@@ -427,9 +427,9 @@ npm run lint
 Vercel Dashboard → Settings → Environment Variables
 
 Agregar:
-- `ML_UWUS_URL`
+- `ML_MOCHIS_URL`
 - `ML_GATOS_URL`
-- `ML_PIFOS_URL`
+- `ML_PONEJOS_URL`
 - `WHATSAPP_NUMBER`
 - `NEXT_PUBLIC_GA_ID` (opcional)
 
@@ -464,7 +464,7 @@ Ver [docs/image-specs.md](docs/image-specs.md) para tamaños y formato.
 ### Estructura
 ```
 public/images/products/
-├── uwus/
+├── mochis/
 │   ├── mimi.webp
 │   ├── duoduo.webp
 │   ├── paopao.webp
@@ -474,11 +474,11 @@ public/images/products/
 │   ├── gato-negro.webp
 │   ├── gato-blanco.webp
 │   └── gato-gris.webp
-└── pifos/
-    ├── pifo-rojo.webp
-    ├── pifo-verde.webp
-    ├── pifo-azul.webp
-    └── pifo-amarillo.webp
+└── ponejos/
+    ├── ponejo-rojo.webp
+    ├── ponejo-verde.webp
+    ├── ponejo-azul.webp
+    └── ponejo-amarillo.webp
 ```
 
 ### Tamaños Recomendados

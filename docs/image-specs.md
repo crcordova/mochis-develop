@@ -5,7 +5,7 @@
 ```
 public/images/
 ├── products/
-│   ├── uwus/
+│   ├── mochis/
 │   │   ├── mimi.webp
 │   │   ├── duoduo.webp
 │   │   ├── paopao.webp
@@ -15,11 +15,14 @@ public/images/
 │   │   ├── gato-negro.webp
 │   │   ├── gato-blanco.webp
 │   │   └── gato-gris.webp
-│   └── pifos/
-│       ├── pifo-rojo.webp
-│       ├── pifo-verde.webp
-│       ├── pifo-azul.webp
-│       └── pifo-amarillo.webp
+│   └── ponejos/
+│       ├── ponejo-rojo.webp
+│       ├── ponejo-verde.webp
+│       ├── ponejo-azul.webp
+│       └── ponejo-amarillo.webp
+├── categories/
+│   ├── mochis-collection.webp
+│   └── ponejos-collection.webp
 ├── hero/
 │   └── (imágenes de portada para home)
 └── thumbs/
@@ -54,9 +57,10 @@ public/images/
 
 ## Convenciones de Nombre
 
-- **Uwus**: `{nombre}.webp` (ej: `mimi.webp`)
+- **Mochis**: `{nombre}.webp` (ej: `mimi.webp`)
 - **Gatos**: `gato-{color}.webp` (ej: `gato-negro.webp`)
-- **Pifos**: `pifo-{color}.webp` (ej: `pifo-rojo.webp`)
+- **Ponejos**: `ponejo-{color}.webp` (ej: `ponejo-rojo.webp`)
+- **Category preview collections**: `{categoria}-collection.webp` (ej: `mochis-collection.webp`)
 
 ## Recomendaciones
 

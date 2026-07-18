@@ -12,14 +12,16 @@ export const metadata: Metadata = {
 /**
  * Server page: pre-builds all URLs from env vars, then delegates to client component.
  */
+const SHOP_CATEGORIES = productsData.categories.filter((cat) => cat.id !== 'gatos');
+
 export default function TiendaPage() {
-  const categories = productsData.categories.map((cat) => ({
+  const categories = SHOP_CATEGORIES.map((cat) => ({
     id: cat.id,
     name: cat.name,
   }));
 
-  // Flatten all raw products for structured data (JSON-LD)
-  const allProducts = productsData.categories.flatMap((cat) =>
+  // Flatten shop products for structured data (JSON-LD)
+  const allProducts = SHOP_CATEGORIES.flatMap((cat) =>
     cat.products.map((product) => ({
       id: product.id,
       name: product.name,
@@ -30,7 +32,7 @@ export default function TiendaPage() {
     }))
   );
 
-  const productsWithUrls = productsData.categories.flatMap((cat) => {
+  const productsWithUrls = SHOP_CATEGORIES.flatMap((cat) => {
     const mlUrl = getMLUrl(cat.id);
 
     return cat.products.map((product) => {

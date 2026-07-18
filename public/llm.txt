@@ -4,7 +4,7 @@
 
 ## Productos
 
-### Uwus
+### Mochis
 Peluches grandes con cara. 5 personalidades únicas:
 - Mimi (rosa) - Dulce y cariñosa
 - Duoduo (azul) - Tranquilo y sabio
@@ -18,7 +18,7 @@ Peluches medianos. 3 colores:
 - Blanco
 - Gris
 
-### Pifos
+### Ponejos
 Peluches pequeños. 4 colores:
 - Rojo
 - Verde
@@ -54,4 +54,4 @@ Los productos están diseñados para:
 2. Adultos: estudio de idiomas, compañía, apoyo emocional
 3. Todos: interacción con tecnología de forma responsable
 
-Categorías de productos: Uwus (grandes, con nombre), Gatitos (medianos, por color), Pifos (pequeños, por color).
+Categorías de productos: Mochis (grandes, con nombre), Gatitos (medianos, por color), Ponejos (pequeños, por color).

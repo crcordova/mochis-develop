@@ -13,6 +13,7 @@ interface CardProps {
   trackingData?: Record<string, string | number | boolean>;
   children?: React.ReactNode;
   className?: string;
+  childrenClassName?: string;
 }
 
 function ImagePlaceholder() {
@@ -52,6 +53,7 @@ export function Card({
   trackingData,
   children,
   className = '',
+  childrenClassName = '',
 }: CardProps) {
   const isClickable = Boolean(onClick);
 
@@ -127,7 +129,12 @@ export function Card({
         ) : null}
 
         {children ? (
-          <div className="flex flex-wrap items-center gap-[var(--space-sm)] mt-[var(--space-xs)]">
+          <div
+            className={
+              childrenClassName ||
+              'flex flex-wrap items-center gap-[var(--space-sm)] mt-[var(--space-xs)]'
+            }
+          >
             {children}
           </div>
         ) : null}

@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/Badge';
 import { BuyButtons } from './BuyButtons';
 import { trackProductView } from '@/lib/analytics';
 
-type BadgeVariant = 'uwus' | 'gatos' | 'pifos' | 'ponejos' | 'default';
+type BadgeVariant = 'mochis' | 'gatos' | 'ponejos' | 'default';
 
 interface ProductData {
   id: string;
@@ -45,21 +45,18 @@ export function ProductCard({
   }, [product.id, displayName, category]);
 
   const badgeVariant = (
-    ['uwus', 'gatos', 'pifos', 'ponejos'].includes(category)
-      ? category === 'pifos'
-        ? 'ponejos'
-        : category
-      : 'default'
+    ['mochis', 'gatos', 'ponejos'].includes(category) ? category : 'default'
   ) as BadgeVariant;
 
   return (
-    <div className="flex flex-col gap-[var(--space-sm)]">
-      <Card
-        title={displayName}
-        description={product.description}
-        image={product.image}
-        onClick={handleCardClick}
-      >
+    <Card
+      title={displayName}
+      description={product.description}
+      image={product.image}
+      onClick={handleCardClick}
+      childrenClassName="mt-auto flex flex-col gap-[var(--space-sm)]"
+    >
+      <div className="flex flex-wrap items-center gap-[var(--space-sm)]">
         <Badge variant={badgeVariant} label={categoryName} />
         {product.features.map((feature) => (
           <span
@@ -78,7 +75,7 @@ export function ProductCard({
             {feature}
           </span>
         ))}
-      </Card>
+      </div>
 
       <BuyButtons
         mlUrl={mlUrl}
@@ -88,6 +85,6 @@ export function ProductCard({
         category={category}
         categoryName={categoryName}
       />
-    </div>
+    </Card>
   );
 }

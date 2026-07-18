@@ -49,7 +49,7 @@ mochis-play/
 
 ## Catálogo de Productos
 
-### Uwus (5 peluches con nombre)
+### Mochis (5 peluches con nombre)
 | ID | Nombre | Color | Tamaño |
 |----|--------|-------|--------|
 | mimi | Mimi | Rosa | Grande |
@@ -65,13 +65,13 @@ mochis-play/
 | gato-blanco | Blanco | Mediano |
 | gato-gris | Gris | Mediano |
 
-### Pifos (4 peluches por color)
+### Ponejos (4 peluches por color)
 | ID | Color | Tamaño |
 |----|-------|--------|
-| pifo-rojo | Rojo | Pequeño |
-| pifo-verde | Verde | Pequeño |
-| pifo-azul | Azul | Pequeño |
-| pifo-amarillo | Amarillo | Pequeño |
+| ponejo-rojo | Rojo | Pequeño |
+| ponejo-verde | Verde | Pequeño |
+| ponejo-azul | Azul | Pequeño |
+| ponejo-amarillo | Amarillo | Pequeño |
 
 ## Páginas y Rutas
 
@@ -88,7 +88,7 @@ mochis-play/
 ### UI Components
 - **Button**: Variantes (primary, secondary, outline), tamaños (sm, md, lg), tracking integrado
 - **Card**: Para productos, tutoriales, blog. Tracking en click.
-- **Badge**: Etiquetas de categoría (uwus, gatos, pifos)
+- **Badge**: Etiquetas de categoría (mochis, gatos, ponejos)
 
 ### Layout Components
 - **Header**: Sticky, navegación responsive, tracking en links
@@ -131,9 +131,9 @@ peluches con IA, peluches inteligentes, juguetes educativos, IA para niños, apr
 
 | Variable | Descripción | Requerido |
 |----------|-------------|-----------|
-| `ML_UWUS_URL` | Link MercadoLibre categoría Uwus | Sí |
+| `ML_MOCHIS_URL` | Link MercadoLibre categoría Mochis | Sí |
 | `ML_GATOS_URL` | Link MercadoLibre categoría Gatitos | Sí |
-| `ML_PIFOS_URL` | Link MercadoLibre categoría Pifos | Sí |
+| `ML_PONEJOS_URL` | Link MercadoLibre categoría Ponejos | Sí |
 | `WHATSAPP_NUMBER` | Número WhatsApp (con código país) | Sí |
 | `NEXT_PUBLIC_GA_ID` | Google Analytics ID | No (opcional) |
 
@@ -141,13 +141,13 @@ peluches con IA, peluches inteligentes, juguetes educativos, IA para niños, apr
 
 ### MercadoLibre
 - Botón por categoría (no por producto)
-- Lee URL de variable de entorno (`ML_UWUS_URL`, `ML_GATOS_URL`, `ML_PIFOS_URL`)
+- Lee URL de variable de entorno (`ML_MOCHIS_URL`, `ML_GATOS_URL`, `ML_PONEJOS_URL`)
 - Tracking: `buy_ml_click`
 
 ### WhatsApp
 - Botón por producto
 - Mensaje dinámico: "Hola! Me interesa [nombre] ([categoría] [color])"
-- Ejemplo: "Hola! Me interesa Mimi (uwus rosa)"
+- Ejemplo: "Hola! Me interesa Mimi (mochis rosa)"
 - Lee número de `WHATSAPP_NUMBER`
 - Tracking: `buy_whatsapp_click`
 
@@ -165,9 +165,9 @@ Todos los datos están en `src/data/` y son editables sin modificar código:
 ### Estructura
 ```
 public/images/products/
-├── uwus/          # mimi.webp, duoduo.webp, paopao.webp, yuyu.webp, nana.webp
+├── mochis/        # mimi.webp, duoduo.webp, paopao.webp, yuyu.webp, nana.webp
 ├── gatos/         # gato-negro.webp, gato-blanco.webp, gato-gris.webp
-└── pifos/         # pifo-rojo.webp, pifo-verde.webp, pifo-azul.webp, pifo-amarillo.webp
+└── ponejos/       # ponejo-rojo.webp, ponejo-verde.webp, ponejo-azul.webp, ponejo-amarillo.webp
 ```
 
 ### Especificaciones
@@ -282,9 +282,9 @@ opencode
 
 ### Pendiente (Fase 5.3 + Contenido)
 - ⏳ **Deploy a Vercel** (Slice 5.3) — requiere configuración de variables de entorno reales
-- ⏳ **Imágenes de productos** — 12 imágenes WebP (5 Uwus + 3 Gatitos + 4 Pifos)
+- ⏳ **Imágenes de productos** — 12 imágenes WebP (5 Mochis + 3 Gatitos + 4 Ponejos)
 - ⏳ **Imágenes de hero/fondo** — Hero principal para Home, banners opcionales
-- ⏳ **Variables de entorno reales** — ML_UWUS_URL, ML_GATOS_URL, ML_PIFOS_URL, WHATSAPP_NUMBER
+- ⏳ **Variables de entorno reales** — ML_MOCHIS_URL, ML_GATOS_URL, ML_PONEJOS_URL, WHATSAPP_NUMBER
 
 ### Documentación para Próximo Agente
 - 📄 **Handoff de Diseño e Imágenes:** `Agent-Orquest/docs/orchestration/handoff-design-images.md`
