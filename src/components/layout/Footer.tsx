@@ -37,10 +37,15 @@ export function Footer() {
 
   return (
     <footer
-      className="bg-[var(--color-bg-subtle)] border-t border-[var(--color-border)]"
+      className="relative bg-[var(--color-bg-subtle)] border-t border-[var(--color-border)]"
       role="contentinfo"
     >
-      <div className="max-w-7xl mx-auto px-4 py-12">
+      {/* Purple-tinted transition band between page content and gray footer */}
+      <div
+        aria-hidden="true"
+        className="absolute top-0 left-0 right-0 h-3 bg-gradient-to-b from-[rgba(120,60,165,0.30)] to-transparent"
+      />
+      <div className="relative max-w-7xl mx-auto px-4 pt-14 pb-12">
         {/* Main grid: 3 columns on desktop, stacked on mobile */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Column 1: Brand */}

@@ -8,7 +8,6 @@ interface FeatureSlide {
   title: string;
   description: string;
   image: string;
-  overlay: string;
   icon: React.ReactNode;
 }
 
@@ -95,7 +94,6 @@ const FEATURES: FeatureSlide[] = [
     description:
       'Juegos cortos, historias interactivas y adivinanzas que se adaptan al momento. Cada sesión es diferente: la IA improvisa, así que nunca se repite.',
     image: '/images/home/juegos.webp',
-    overlay: 'from-violet-950/90 via-violet-900/75 to-violet-950/90',
     icon: <JuegosIcon />,
   },
   {
@@ -104,7 +102,6 @@ const FEATURES: FeatureSlide[] = [
     description:
       'Conversaciones reales y apoyo emocional para niños y adultos. Puedes preguntarle de todo: cómo resolver un problema, qué canción escuchar, o simplemente hablar de tu día.',
     image: '/images/home/compania.webp',
-    overlay: 'from-violet-900/85 via-violet-800/70 to-violet-900/85',
     icon: <CompaniaIcon />,
   },
   {
@@ -113,7 +110,6 @@ const FEATURES: FeatureSlide[] = [
     description:
       'Aprende inglés y otros idiomas de forma lúdica. Mimi traduce, corrige pronunciación y enseña vocabulario nuevo con juegos que se sienten como jugar, no como estudiar.',
     image: '/images/home/idiom.webp',
-    overlay: 'from-violet-800/80 via-stone-800/65 to-violet-900/80',
     icon: <IdiomasIcon />,
   },
   {
@@ -122,7 +118,6 @@ const FEATURES: FeatureSlide[] = [
     description:
       'Configura roles y planes de estudio para cada miembro de la familia. Mimi puede ser profesora de inglés para los niños, compañera de conversación para los adultos, o lo que tú necesites.',
     image: '/images/home/personalizable.webp',
-    overlay: 'from-stone-900/85 via-violet-950/70 to-stone-900/90',
     icon: <PersonalizableIcon />,
   },
 ];
@@ -206,9 +201,10 @@ export function FeaturesShowcase() {
               priority={index === 0}
               loading={index === 0 ? 'eager' : 'lazy'}
             />
-            {/* Color overlay: shifts from deep violet to muted stone as the user scrolls. */}
+            {/* Color overlay: brand purple to unify the section. */}
             <div
-              className={`absolute inset-0 bg-gradient-to-b ${feature.overlay}`}
+              className="absolute inset-0"
+              style={{ background: 'var(--color-features-overlay)' }}
             />
             {/* Vignette to keep text legible at the edges. */}
             <div
@@ -220,11 +216,11 @@ export function FeaturesShowcase() {
             />
             {/* Top fade on the first slide so it blends into the Hero section. */}
             {index === 0 && (
-              <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-violet-950 to-transparent" />
+              <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[var(--color-brand-purple-700)] to-transparent" />
             )}
             {/* Bottom fade on the last slide so it blends into the CategoryPreview section. */}
             {index === SLIDE_COUNT - 1 && (
-              <div className="absolute inset-x-0 bottom-0 z-10 h-40 bg-gradient-to-b from-transparent via-violet-950/60 to-violet-950" />
+              <div className="absolute inset-x-0 bottom-0 z-10 h-40 bg-gradient-to-b from-transparent via-[var(--color-brand-purple-500)]/60 to-[var(--color-brand-purple-700)]" />
             )}
           </div>
         ))}
@@ -245,25 +241,25 @@ export function FeaturesShowcase() {
                     : 'opacity-0 translate-y-6 pointer-events-none'
                 }`}
               >
-                <div className="max-w-4xl text-center text-[var(--color-text-inverse)]">
+                <div className="max-w-5xl text-center text-[var(--color-text-inverse)]">
                   <div
-                    className="mx-auto mb-[var(--space-lg)] flex h-16 w-16 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm ring-1 ring-white/20 md:h-20 md:w-20"
+                    className="mx-auto mb-[var(--space-xl)] flex h-16 w-16 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm ring-1 ring-white/20 md:h-24 md:w-24"
                     aria-hidden="true"
                   >
-                    <div className="h-8 w-8 text-white md:h-10 md:w-10">
+                    <div className="h-8 w-8 text-white md:h-12 md:w-12">
                       {feature.icon}
                     </div>
                   </div>
 
                   <h2
                     id={`${feature.id}-heading`}
-                    className="font-display text-[var(--text-heading-xl)] font-[var(--font-weight-bold)] leading-[var(--line-height-tight)] tracking-[var(--letter-spacing-tight)]"
+                    className="font-balloon text-[length:var(--text-display-xl)] font-[var(--font-weight-bold)] leading-[var(--line-height-tight)] tracking-[var(--letter-spacing-tight)]"
                     style={textShadow}
                   >
                     {feature.title}
                   </h2>
                   <p
-                    className="mx-auto mt-[var(--space-md)] max-w-2xl text-[var(--text-body-lg)] leading-[var(--line-height-relaxed)] opacity-95"
+                    className="mx-auto mt-[var(--space-lg)] max-w-3xl text-[length:var(--text-body-xl)] leading-[var(--line-height-relaxed)] opacity-95"
                     style={textShadow}
                   >
                     {feature.description}

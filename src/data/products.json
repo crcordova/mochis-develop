@@ -4,7 +4,7 @@
       "id": "mochis",
       "name": "mochis",
       "description": "Peluches con cara, los más grandes. 5 personalidades únicas con IA integrada para aprender, jugar y hacer compañía.",
-      "size": "grande",
+      "size": "grande 25cm",
       "has_name": true,
       "ml_env_var": "ML_MOCHIS_URL",
       "products": [
@@ -88,7 +88,7 @@
       "id": "ponejos",
       "name": "Ponejos",
       "description": "Pequeños y juguetones. Peluches compactos con IA para diversión rápida.",
-      "size": "pequeño",
+      "size": "pequeño 10cm",
       "has_name": false,
       "ml_env_var": "ML_PONEJOS_URL",
       "products": [

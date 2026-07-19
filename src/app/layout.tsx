@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Poppins } from 'next/font/google';
+import { Inter, Nunito } from 'next/font/google';
 import { Analytics } from '@/lib/analytics';
 import { generateOrganizationSchema, JsonLd } from '@/lib/structured-data';
 import { Header, Footer } from '@/components/layout';
@@ -12,10 +12,10 @@ const inter = Inter({
   display: 'swap',
 });
 
-const poppins = Poppins({
+const nunito = Nunito({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-poppins',
+  weight: ['400', '600', '700', '800'],
+  variable: '--font-nunito',
   display: 'swap',
 });
 
@@ -51,7 +51,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="es" className={`${inter.variable} ${nunito.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)] antialiased">
         <a
           href="#main-content"

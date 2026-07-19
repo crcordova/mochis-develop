@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import blogData from '@/data/blog.json';
+import { PageBackground } from '@/components/layout';
 import { BlogClient } from './BlogClient';
 
 export const metadata: Metadata = {
@@ -12,8 +13,11 @@ export default function BlogPage() {
   return (
     <main
       id="main-content"
-      className="px-[var(--space-md)] py-[var(--space-3xl)]"
+      className="relative px-[var(--space-md)] py-[var(--space-3xl)]"
     >
+      {/* Background image — using the hero image as a placeholder until page-specific images are ready. */}
+      <PageBackground imageSrc="/images/hero/hero-home.webp" overlay="hero" washOpacity={80} />
+
       <div className="max-w-5xl mx-auto">
         <header className="text-center mb-[var(--space-2xl)]">
           <h1 className="text-[var(--text-heading-xl)] font-[var(--font-weight-bold)] text-[var(--color-text)] mb-[var(--space-sm)]">

@@ -2,16 +2,14 @@
 
 import { useCallback } from 'react';
 import { Card } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
 import { BuyButtons } from './BuyButtons';
 import { trackProductView } from '@/lib/analytics';
-
-type BadgeVariant = 'mochis' | 'gatos' | 'ponejos' | 'default';
 
 interface ProductData {
   id: string;
   name: string | null;
   color: string;
+  size: string;
   image: string;
   description: string;
   features: string[];
@@ -27,7 +25,7 @@ interface ProductCardProps {
 }
 
 /**
- * Product card with image, description, category badge, feature tags, and buy buttons.
+ * Product card with image, description, physical specs (color/size), and buy buttons.
  *
  * Tracking: fires `product_view` via onClick (not Card's trackingId prop) because
  * the event name and payload differ from Card's generic `card_click` event.
@@ -44,38 +42,19 @@ export function ProductCard({
     trackProductView(product.id, displayName, category);
   }, [product.id, displayName, category]);
 
-  const badgeVariant = (
-    ['mochis', 'gatos', 'ponejos'].includes(category) ? category : 'default'
-  ) as BadgeVariant;
-
   return (
     <Card
       title={displayName}
       description={product.description}
       image={product.image}
       onClick={handleCardClick}
+      titleClassName="font-display text-[var(--text-heading-md)] font-bold text-[var(--color-brand-purple-750)] text-center"
+      descriptionClassName="text-center"
       childrenClassName="mt-auto flex flex-col gap-[var(--space-sm)]"
     >
-      <div className="flex flex-wrap items-center gap-[var(--space-sm)]">
-        <Badge variant={badgeVariant} label={categoryName} />
-        {product.features.map((feature) => (
-          <span
-            key={feature}
-            className={[
-              'inline-flex items-center',
-              'px-[var(--space-sm)] py-[var(--space-xs)]',
-              'rounded-[var(--radius-badge)]',
-              'text-[var(--font-size-xs)]',
-              'bg-[var(--color-bg-subtle)] text-[var(--color-text-secondary)]',
-              'font-[var(--font-weight-medium)]',
-              'leading-[var(--line-height-tight)]',
-              'whitespace-nowrap',
-            ].join(' ')}
-          >
-            {feature}
-          </span>
-        ))}
-      </div>
+      <p className="text-center text-[var(--text-body-sm)] text-[var(--color-text-secondary)] leading-[var(--line-height-normal)]">
+        Color {product.color} · Tamaño {product.size}
+      </p>
 
       <BuyButtons
         mlUrl={mlUrl}

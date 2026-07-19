@@ -38,12 +38,19 @@ export function Header() {
   const headerClasses = [
     'sticky top-0 z-40 w-full bg-[var(--color-bg-elevated)]',
     'transition-shadow duration-base',
-    isScrolled ? 'shadow-md' : 'shadow-none',
+    isScrolled
+      ? 'shadow-[0_8px_30px_-10px_rgba(120,60,165,0.30)]'
+      : 'shadow-none',
   ].join(' ');
 
   return (
     <>
-      <header className={headerClasses}>
+      <header className={`${headerClasses} relative`}>
+        {/* Purple-tinted transition band between gray header and purple backgrounds */}
+        <div
+          aria-hidden="true"
+          className="absolute -bottom-2 left-0 right-0 h-2 bg-gradient-to-b from-[var(--color-bg-elevated)] to-[rgba(120,60,165,0.25)]"
+        />
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:h-18 md:px-6">
           {/* Logo */}
           <Link

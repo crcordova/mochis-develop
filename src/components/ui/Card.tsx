@@ -14,6 +14,8 @@ interface CardProps {
   children?: React.ReactNode;
   className?: string;
   childrenClassName?: string;
+  titleClassName?: string;
+  descriptionClassName?: string;
 }
 
 function ImagePlaceholder() {
@@ -54,6 +56,8 @@ export function Card({
   children,
   className = '',
   childrenClassName = '',
+  titleClassName = '',
+  descriptionClassName = '',
 }: CardProps) {
   const isClickable = Boolean(onClick);
 
@@ -83,13 +87,14 @@ export function Card({
   return (
     <div
       className={[
-        'w-full h-full flex flex-col overflow-hidden',
-        'bg-[var(--color-bg-card)]',
+        'relative w-full h-full flex flex-col overflow-hidden',
+        'bg-[var(--color-bg-elevated)]',
         'rounded-[var(--radius-card)]',
-        'shadow-[var(--shadow-card)]',
+        'border border-[var(--color-border)]',
+        'shadow-[0_8px_30px_-10px_rgba(120,60,165,0.20)]',
         'transition-shadow duration-[var(--duration-base)] ease-[var(--easing-default)]',
         isClickable
-          ? 'cursor-pointer hover:shadow-[var(--shadow-card-hover)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-focus-ring)]'
+          ? 'cursor-pointer hover:shadow-[0_12px_40px_-12px_rgba(120,60,165,0.30)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-focus-ring)]'
           : '',
         className,
       ]
@@ -118,12 +123,22 @@ export function Card({
 
       {/* Content area */}
       <div className="p-[var(--space-md)] flex flex-col gap-[var(--space-sm)] flex-grow">
-        <h3 className="text-[var(--text-heading-sm)] font-[var(--font-weight-semibold)] text-[var(--color-text)] leading-[var(--line-height-tight)]">
+        <h3
+          className={[
+            'text-[var(--text-heading-sm)] font-[var(--font-weight-semibold)] text-[var(--color-text)] leading-[var(--line-height-tight)]',
+            titleClassName,
+          ].join(' ')}
+        >
           {title}
         </h3>
 
         {description ? (
-          <p className="text-[var(--text-body-sm)] text-[var(--color-text-secondary)] leading-[var(--line-height-normal)]">
+          <p
+            className={[
+              'text-[var(--text-body-sm)] text-[var(--color-text-secondary)] leading-[var(--line-height-normal)]',
+              descriptionClassName,
+            ].join(' ')}
+          >
             {description}
           </p>
         ) : null}
@@ -139,6 +154,12 @@ export function Card({
           </div>
         ) : null}
       </div>
+
+      {/* Bottom transition band — blends the card into the purple page background. */}
+      <div
+        aria-hidden="true"
+        className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-b from-[var(--color-bg-elevated)] to-[rgba(120,60,165,0.25)]"
+      />
     </div>
   );
 }

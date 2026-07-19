@@ -54,9 +54,10 @@ export function ShopBackground() {
         />
       </div>
 
-      {/* Layer 2: Violet overlay + vignette to match the home hero. */}
+      {/* Layer 2: Brand purple overlay + vignette to match the home hero. */}
       <div
-        className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-violet-950/85 via-violet-900/70 to-violet-950/85"
+        className="pointer-events-none absolute inset-0 z-[1]"
+        style={{ background: 'var(--color-shop-overlay)' }}
       />
       <div
         className="pointer-events-none absolute inset-0 z-[1]"

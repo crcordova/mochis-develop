@@ -40,7 +40,7 @@ export function CategoryPreview() {
       aria-labelledby="categories-heading"
       className="relative flex min-h-[60vh] items-center overflow-hidden py-[var(--space-2xl)] px-[var(--space-md)] sm:px-[var(--space-lg)] lg:px-[var(--space-xl)]"
     >
-      {/* Background image — full-bleed with violet overlay to match the hero/features look. */}
+      {/* Background image — full-bleed with brand purple overlay to match the hero/features look. */}
       <div className="absolute inset-0 -z-20">
         <Image
           src="/images/hero/hero-home.webp"
@@ -54,7 +54,8 @@ export function CategoryPreview() {
       </div>
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-violet-950/90 via-violet-900/75 to-violet-950/90"
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{ background: 'var(--color-hero-overlay)' }}
       />
       <div
         aria-hidden="true"
@@ -68,12 +69,12 @@ export function CategoryPreview() {
       {/* Top fade-in from the FeaturesShowcase section above. */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 z-[1] h-40 bg-gradient-to-b from-violet-950 via-violet-950/80 to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 z-[1] h-40 bg-gradient-to-b from-[var(--color-brand-purple-700)] via-[var(--color-brand-purple-700)]/80 to-transparent"
       />
       {/* Bottom fade-out into the AI Disclaimer section below. */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-40 bg-gradient-to-t from-violet-950 via-violet-950/80 to-transparent"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-40 bg-gradient-to-t from-[var(--color-brand-purple-700)] via-[var(--color-brand-purple-700)]/80 to-transparent"
       />
 
       <div className="relative z-10 mx-auto w-full max-w-4xl">

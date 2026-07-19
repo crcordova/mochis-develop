@@ -6,19 +6,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-inter: 'Inter', system-ui, sans-serif;
-  --font-poppins: 'Poppins', system-ui, sans-serif;
-}
-
 body {
-  font-family: var(--font-inter);
+  font-family: var(--font-family-sans);
   color: var(--color-text);
   background-color: var(--color-bg);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-poppins);
+  font-family: var(--font-family-display);
 }
 
 /* Smooth focus styles using design tokens */

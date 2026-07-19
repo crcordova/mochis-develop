@@ -26,6 +26,7 @@ export default function TiendaPage() {
       id: product.id,
       name: product.name,
       color: product.color,
+      size: cat.size,
       image: product.image,
       description: product.description,
       features: product.features,
@@ -53,6 +54,7 @@ export default function TiendaPage() {
         id: product.id,
         name: product.name,
         color: product.color,
+        size: cat.size,
         image: product.image,
         description: product.description,
         features: product.features,
@@ -69,10 +71,10 @@ export default function TiendaPage() {
     <main id="main-content" className="px-4 py-[var(--space-2xl)] max-w-7xl mx-auto">
       <JsonLd data={generateProductSchema(allProducts)} />
       <div className="text-center mb-[var(--space-xl)]">
-        <h1 className="font-display text-[var(--text-heading-lg)] font-bold text-[var(--color-text)]">
+        <h1 className="font-balloon text-[length:var(--text-display)] font-bold text-[var(--color-text)]">
           Tienda
         </h1>
-        <p className="mt-[var(--space-sm)] text-[var(--text-body)] text-[var(--color-text-secondary)]">
+        <p className="mt-[var(--space-sm)] font-sans text-[length:var(--text-body-xl)] text-[var(--color-text-secondary)]">
           Elige tu peluche inteligente con IA integrada
         </p>
       </div>

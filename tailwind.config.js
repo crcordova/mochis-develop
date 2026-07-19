@@ -111,8 +111,11 @@ module.exports = {
       fontFamily: {
         sans:    ['var(--font-family-sans)', 'system-ui', 'sans-serif'],
         display: ['var(--font-family-display)', 'system-ui', 'sans-serif'],
+        balloon: ['var(--font-family-balloon)', 'system-ui', 'sans-serif'],
       },
       fontSize: {
+        '7xl':     ['var(--font-size-7xl)',   { lineHeight: 'var(--line-height-tight)' }],
+        '6xl':     ['var(--font-size-6xl)',   { lineHeight: 'var(--line-height-tight)' }],
         'display': ['var(--font-size-5xl)',   { lineHeight: 'var(--line-height-tight)' }],
         '4xl':     ['var(--font-size-4xl)',   { lineHeight: 'var(--line-height-tight)' }],
         '3xl':     ['var(--font-size-3xl)',   { lineHeight: 'var(--line-height-tight)' }],

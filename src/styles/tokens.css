@@ -44,6 +44,19 @@
   --color-violet-800: #5B21B6;
   --color-violet-900: #4C1D95;
 
+  /* --- Color Primitives: Brand Purple (background overlays) --- */
+  --color-brand-purple-50:  #F3E8FF;
+  --color-brand-purple-100: #E9D5FF;
+  --color-brand-purple-200: #D8B4FE;
+  --color-brand-purple-300: #C084FC;
+  --color-brand-purple-400: #A855F7;
+  --color-brand-purple-500: #783CA5;
+  --color-brand-purple-600: #5E2E82;
+  --color-brand-purple-700: #472262;
+  --color-brand-purple-750: #421E7D;
+  --color-brand-purple-800: #341848;
+  --color-brand-purple-900: #220F2E;
+
   /* --- Color Primitives: Warm Stone (Neutrals) --- */
   --color-stone-50:  #FAFAF9;
   --color-stone-100: #F5F5F4;
@@ -130,19 +143,25 @@
   --space-20: 80px;
   --space-24: 96px;
 
-  /* --- Typography Primitives --- */
-  --font-family-sans:    'Inter', system-ui, sans-serif;
-  --font-family-display: 'Poppins', system-ui, sans-serif;
+  /* --- Typography Primitives ---
+     --font-family-sans/display are injected by next/font/google in
+     src/app/layout.tsx. --font-family-balloon references Fredoka, which is
+     loaded manually via Google Fonts link so it works in any component. */
+  --font-family-sans:    var(--font-inter);
+  --font-family-display: var(--font-nunito);
+  --font-family-balloon: 'Fredoka', 'Nunito', system-ui, sans-serif;
 
   --font-size-xs:  0.75rem;    /* 12px */
-  --font-size-sm:  0.875rem;   /* 14px */
-  --font-size-base: 1rem;      /* 16px */
-  --font-size-lg:  1.125rem;   /* 18px */
-  --font-size-xl:  1.25rem;    /* 20px */
-  --font-size-2xl: 1.5rem;     /* 24px */
-  --font-size-3xl: 1.875rem;   /* 30px */
-  --font-size-4xl: 2.25rem;    /* 36px */
-  --font-size-5xl: 3rem;       /* 48px */
+  --font-size-sm:  1rem;       /* 16px */
+  --font-size-base: 1.125rem;  /* 18px */
+  --font-size-lg:  1.25rem;    /* 20px */
+  --font-size-xl:  1.5rem;     /* 24px */
+  --font-size-2xl: 1.875rem;   /* 30px */
+  --font-size-3xl: 2.25rem;    /* 36px */
+  --font-size-4xl: 2.75rem;    /* 44px */
+  --font-size-5xl: 3.75rem;    /* 60px */
+  --font-size-6xl: 4.5rem;     /* 72px */
+  --font-size-7xl: 8rem;       /* 128px */
 
   --font-weight-normal:   400;
   --font-weight-medium:   500;
@@ -219,6 +238,27 @@
   --color-bg-elevated:    #FFFFFF;                  /* Modals, dropdowns */
   --color-bg-overlay:     rgba(28, 25, 23, 0.4);   /* Overlay backdrop */
 
+  /* --- Brand Purple Overlays (Hero, Features, Shop, transitions) --- */
+  --color-hero-overlay: linear-gradient(
+    180deg,
+    rgba(120, 60, 165, 0.92) 0%,
+    rgba(120, 60, 165, 0.78) 50%,
+    rgba(71, 34, 98, 0.92) 100%
+  );
+  --color-features-overlay: linear-gradient(
+    180deg,
+    rgba(94, 46, 130, 0.90) 0%,
+    rgba(120, 60, 165, 0.75) 50%,
+    rgba(94, 46, 130, 0.90) 100%
+  );
+  --color-shop-overlay: linear-gradient(
+    180deg,
+    rgba(71, 34, 98, 0.88) 0%,
+    rgba(120, 60, 165, 0.72) 50%,
+    rgba(71, 34, 98, 0.88) 100%
+  );
+  --color-purple-glow: rgba(120, 60, 165, 0.25);
+
   /* --- Text Colors --- */
   /* Dark gray, NOT pure black — softer on the eyes */
   --color-text:           var(--color-stone-900);  /* Primary text */
@@ -271,11 +311,14 @@
   --text-body-sm:       var(--font-size-sm);
   --text-body:          var(--font-size-base);
   --text-body-lg:       var(--font-size-lg);
+  --text-body-xl:       var(--font-size-xl);
   --text-heading-sm:    var(--font-size-xl);
   --text-heading-md:    var(--font-size-2xl);
   --text-heading-lg:    var(--font-size-3xl);
   --text-heading-xl:    var(--font-size-4xl);
   --text-display:       var(--font-size-5xl);
+  --text-display-xl:    var(--font-size-6xl);
+  --text-hero:          var(--font-size-7xl);
 
   /* --- Semantic Shadows --- */
   --shadow-card:        var(--shadow-sm);   /* Resting cards */

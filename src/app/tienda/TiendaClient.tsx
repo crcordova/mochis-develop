@@ -8,6 +8,7 @@ interface ProductWithUrls {
   id: string;
   name: string | null;
   color: string;
+  size: string;
   image: string;
   description: string;
   features: string[];

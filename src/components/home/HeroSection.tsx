@@ -47,10 +47,11 @@ export function HeroSection() {
         />
       </div>
 
-      {/* Layer 2: Violet overlay + vignette to match FeaturesShowcase. */}
+      {/* Layer 2: Brand purple overlay + vignette to match FeaturesShowcase. */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-violet-950/85 via-violet-900/70 to-violet-950/85"
+        className="pointer-events-none absolute inset-0 z-[1]"
+        style={{ background: 'var(--color-hero-overlay)' }}
       />
       <div
         aria-hidden="true"
@@ -64,19 +65,19 @@ export function HeroSection() {
       {/* Layer 3: Bottom fade-out into the first feature slide background. */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-40 bg-gradient-to-t from-violet-950 to-transparent"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-40 bg-gradient-to-t from-[var(--color-brand-purple-700)] to-transparent"
       />
 
       {/* Layer 4: Content — centered text on top of the background. */}
       <div className="relative z-[2] mx-auto flex min-h-[70vh] max-w-4xl flex-col items-center justify-center px-[var(--space-md)] py-[var(--space-2xl)] text-center md:min-h-[80vh] sm:py-[var(--space-3xl)]">
         <h1
-          className="font-display text-[var(--text-display)] font-[var(--font-weight-bold)] leading-[var(--line-height-tight)] tracking-[var(--letter-spacing-tight)] text-[var(--color-text-inverse)]"
+          className="font-balloon text-[length:var(--text-hero)] font-[var(--font-weight-bold)] leading-[var(--line-height-tight)] tracking-[var(--letter-spacing-tight)] text-[var(--color-text-inverse)]"
           style={heroTextShadow}
         >
           mochis
         </h1>
         <p
-          className="mt-[var(--space-md)] max-w-2xl text-[var(--text-body-lg)] leading-[var(--line-height-normal)] text-[var(--color-text-inverse)] opacity-95"
+          className="mt-[var(--space-lg)] max-w-3xl text-[length:var(--text-body-xl)] leading-[var(--line-height-relaxed)] text-[var(--color-text-inverse)] opacity-95"
           style={heroTextShadow}
         >
           {siteData.site.description}

@@ -1,7 +1,7 @@
 'use client';
 
 import { useTracking } from '@/lib/useTracking';
-import { Button } from '@/components/ui';
+import { Button, SurfacePanel } from '@/components/ui';
 
 interface ContactoClientProps {
   email: string;
@@ -121,9 +121,7 @@ export function ContactoClient({
   return (
     <div className="space-y-[var(--space-xl)]">
       {/* Email Section */}
-      <section
-        className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] shadow-card p-[var(--space-lg)]"
-      >
+      <SurfacePanel className="p-[var(--space-lg)]">
         <a
           href={`mailto:${email}`}
           onClick={handleEmailClick}
@@ -142,12 +140,10 @@ export function ContactoClient({
             </p>
           </div>
         </a>
-      </section>
+      </SurfacePanel>
 
       {/* WhatsApp Section */}
-      <section
-        className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] shadow-card p-[var(--space-lg)]"
-      >
+      <SurfacePanel className="p-[var(--space-lg)]">
         {whatsappNumber ? (
           <a
             href={`https://wa.me/${whatsappNumber}`}
@@ -185,12 +181,10 @@ export function ContactoClient({
             </div>
           </div>
         )}
-      </section>
+      </SurfacePanel>
 
       {/* Social Links Section */}
-      <section
-        className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] shadow-card p-[var(--space-lg)]"
-      >
+      <SurfacePanel className="p-[var(--space-lg)]">
         <h2 className="text-[var(--text-heading-sm)] font-[var(--font-weight-semibold)] text-[var(--color-text)] mb-[var(--space-md)]">
           Redes Sociales
         </h2>
@@ -237,7 +231,7 @@ export function ContactoClient({
             </span>
           </a>
         </div>
-      </section>
+      </SurfacePanel>
 
       {/* CTA Section */}
       <section className="text-center pt-[var(--space-md)]">
