@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Nunito } from 'next/font/google';
 import { Analytics } from '@/lib/analytics';
 import { generateOrganizationSchema, JsonLd } from '@/lib/structured-data';
-import { Header, Footer } from '@/components/layout';
+import { Header, Footer, WhatsAppBubble } from '@/components/layout';
 import siteData from '@/data/site.json';
 import './globals.css';
 
@@ -70,6 +70,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <WhatsAppBubble phoneNumber={process.env.WHATSAPP_NUMBER ?? ''} />
         <JsonLd data={generateOrganizationSchema()} />
         <Analytics />
       </body>

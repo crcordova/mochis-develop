@@ -1,15 +1,13 @@
 'use client';
 
 import { useCallback } from 'react';
-import { trackBuyMLClick, trackBuyWhatsAppClick } from '@/lib/analytics';
+import { trackBuyMLClick, trackEvent } from '@/lib/analytics';
 
-interface BuyButtonsProps {
+interface CategoryBuyButtonsProps {
+  categoryId: string;
+  categoryName: string;
   mlUrl: string | null;
   whatsappUrl: string | null;
-  productId: string;
-  productName: string;
-  category: string;
-  categoryName: string;
 }
 
 const BASE_CLASSES = [
@@ -18,7 +16,7 @@ const BASE_CLASSES = [
   'transition-colors duration-base',
   'focus:outline-none focus:ring-2 focus:ring-[var(--color-focus-ring)] focus:ring-offset-2',
   'disabled:opacity-50 disabled:pointer-events-none',
-  'px-2 py-1 text-xs sm:px-3 sm:py-1.5 sm:text-sm',
+  'px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base',
 ].join(' ');
 
 const PRIMARY_CLASSES = [
@@ -44,35 +42,38 @@ const DISABLED_CLASSES = [
 ].join(' ');
 
 /**
- * Buy buttons for a product: MercadoLibre (by category) and WhatsApp (by product).
- * Uses native <a> tags for external URLs with tracking on click.
+ * Category-level buy buttons: MercadoLibre (category) and WhatsApp (category inquiry).
+ * Uses native anchors for external URLs with tracking on click.
  */
-export function BuyButtons({
+export function CategoryBuyButtons({
+  categoryId,
+  categoryName,
   mlUrl,
   whatsappUrl,
-  productId,
-  productName,
-  category,
-  categoryName,
-}: BuyButtonsProps) {
+}: CategoryBuyButtonsProps) {
   const handleMLClick = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>) => {
       e.stopPropagation();
-      trackBuyMLClick(category, categoryName);
+      trackBuyMLClick(categoryId, categoryName);
     },
-    [category, categoryName]
+    [categoryId, categoryName]
   );
 
   const handleWhatsAppClick = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>) => {
       e.stopPropagation();
-      trackBuyWhatsAppClick(productId, productName, category);
+      trackEvent({
+        action: 'buy_whatsapp_category_click',
+        category: 'purchase',
+        label: categoryName,
+        value: { category: categoryId, category_name: categoryName },
+      });
     },
-    [productId, productName, category]
+    [categoryId, categoryName]
   );
 
   return (
-    <div className="flex flex-col sm:flex-row gap-[var(--space-xs)] sm:gap-[var(--space-sm)] w-full">
+    <div className="flex flex-wrap justify-center gap-[var(--space-md)]">
       {mlUrl ? (
         <a
           href={mlUrl}
@@ -97,7 +98,7 @@ export function BuyButtons({
           className={OUTLINE_CLASSES}
           onClick={handleWhatsAppClick}
         >
-          Comprar por WhatsApp
+          Consultar por WhatsApp
         </a>
       ) : (
         <span className={DISABLED_CLASSES} aria-disabled="true">

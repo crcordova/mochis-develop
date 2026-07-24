@@ -253,7 +253,7 @@ export function FeaturesShowcase() {
 
                   <h2
                     id={`${feature.id}-heading`}
-                    className="font-balloon text-[length:var(--text-display-xl)] font-[var(--font-weight-bold)] leading-[var(--line-height-tight)] tracking-[var(--letter-spacing-tight)]"
+                    className="font-balloon text-[length:var(--text-heading-md)] sm:text-[length:var(--text-heading-xl)] md:text-[length:var(--text-display)] lg:text-[length:var(--text-display-xl)] font-[var(--font-weight-bold)] leading-[var(--line-height-tight)] tracking-[var(--letter-spacing-tight)] break-words"
                     style={textShadow}
                   >
                     {feature.title}

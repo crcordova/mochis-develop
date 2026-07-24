@@ -92,8 +92,8 @@ export function TiendaClient({ products, categories }: TiendaClientProps) {
         })}
       </div>
 
-      {/* Product grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[var(--space-lg)]">
+      {/* Product grid — 2 columns on mobile, 2 on tablet, 3 on desktop */}
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-[var(--space-sm)] sm:gap-[var(--space-lg)]">
         {filteredProducts.map((product) => (
           <ProductCard
             key={product.id}

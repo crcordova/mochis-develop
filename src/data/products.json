@@ -4,6 +4,16 @@
       "id": "mochis",
       "name": "mochis",
       "description": "Peluches con cara, los más grandes. 5 personalidades únicas con IA integrada para aprender, jugar y hacer compañía.",
+      "longDescription": "Los Mochis son peluches inteligentes diseñados para acompañar a niños y adultos en el aprendizaje, el juego y el día a día. Cada Mochi tiene una personalidad única y está equipado con IA conversacional que permite chatear, practicar idiomas, contar historias y resolver dudas de forma segura y divertida.",
+      "detailFeatures": [
+        "Reconocimiento de Emociones: Captura las emociones multidimensionales de un niño (felicidad, tristeza, ira) a través de cada conversación. Cuando se detectan emociones anormales o peligrosas, inicia automáticamente un diálogo de orientación positiva y envía una alerta en tiempo real a la aplicación para padres.",
+        "Descubrimiento de intereses: Analiza las conversaciones diarias para generar un perfil de intereses del niño y recomienda contenido personalizado, ayudando a los padres a comprender mejor las preferencias de sus hijos.",
+        "Clonación de voz: Los usuarios pueden grabar su propia voz o audio existente para crear voces únicas. El volumen se puede ajustar y se pueden usar varias personalidades de personajes, con las correspondientes expresiones emocionales basadas en el contenido de la conversación para una mejor comunicación interactiva.",
+        "Tarjeta de Memoria de Crecimiento: El juguete con IA puede recordar el nombre de un niño, sus pasatiempos y hitos durante mucho tiempo, preservando cada momento de su trayectoria de crecimiento.",
+        "Educación adecuada a la edad: Proporciona un modelo de desarrollo por etapas adaptado a niños de diferentes grupos de edad: hábitos de comportamiento para niños de 3 a 6 años y desarrollo cognitivo para niños de 7 a 12 años, presentando el contenido mediante instrucción por niveles.",
+        "Personalización por parte de los padres: Permite a los padres diseñar manualmente tareas de desarrollo; los juguetes con IA guiarán a los niños en interacciones y expresiones apropiadas para su edad."
+      ],
+      "detailImage": "/images/categories/mochis-collection.webp",
       "size": "grande 25cm",
       "has_name": true,
       "ml_env_var": "ML_MOCHIS_URL",
@@ -88,6 +98,16 @@
       "id": "ponejos",
       "name": "Ponejos",
       "description": "Pequeños y juguetones. Peluches compactos con IA para diversión rápida.",
+      "longDescription": "Los Ponejos son peluches inteligentes compactos y coloridos, pensados para llevar a cualquier parte. A pesar de su tamaño pequeño, incluyen IA conversacional para juegos rápidos, curiosidades, conversaciones y momentos de relajación. Son el compañero ideal para quienes buscan diversión inmediata en formato de bolsillo.",
+      "detailFeatures": [
+        "Juegos rápidos y conversaciones divertidas: Responde en segundos con chistes, adivinanzas, datos curiosos y mini juegos perfectos para pausas activas y momentos de ocio.",
+        "Portabilidad y diseño compacto: Con un tamaño de bolsillo, los Ponejos acompañan en viajes, en la mochila o en la mesa de noche, siempre listos para interactuar.",
+        "Contenido adaptado por color: Cada color tiene una personalidad sutil —rojo vibrante, verde natural, azul calmado y rosa creativo— que guía la tonalidad de las respuestas y actividades.",
+        "Modo relax y historias cortas: Incluye narraciones breves, respiraciones guiadas y mensajes relajantes para desconectar al final del día.",
+        "Aprendizaje casual: Repasa vocabulario, descubre datos nuevos y practica idiomas en sesiones cortas, sin la presión de una clase formal.",
+        "Sin complicaciones técnicas: Solo requiere conexión WiFi para activar la IA y comenzar a chatear; la batería dura lo suficiente para acompañar toda la jornada."
+      ],
+      "detailImage": "/images/categories/ponejos-collection.webp",
       "size": "pequeño 10cm",
       "has_name": false,
       "ml_env_var": "ML_PONEJOS_URL",

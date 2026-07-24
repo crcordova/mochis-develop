@@ -15,6 +15,7 @@ const categoryPreviews = [
     trackingId: 'home_preview_mochis',
     buttonLabel: 'home_category_mochis',
     buttonText: 'Ver mochis',
+    buttonHref: '/tienda/mochis',
     glowColor: 'var(--color-category-mochis)',
   },
   {
@@ -26,6 +27,7 @@ const categoryPreviews = [
     trackingId: 'home_preview_ponejos',
     buttonLabel: 'home_category_ponejos',
     buttonText: 'Ver Ponejos',
+    buttonHref: '/tienda/ponejos',
     glowColor: 'var(--color-category-ponejos)',
   },
 ];
@@ -109,7 +111,7 @@ export function CategoryPreview() {
                 <Badge label={cat.badgeLabel} variant={cat.badgeVariant} />
               </Card>
               <Button
-                href="/tienda"
+                href={cat.buttonHref}
                 variant="outline"
                 size="sm"
                 trackingLabel={cat.buttonLabel}
